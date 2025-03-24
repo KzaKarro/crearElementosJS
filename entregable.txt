@@ -1,0 +1,44 @@
+La razón por la que hay contenido en el body al revisar en el navegador y no en
+Visual Studio Code es porque en el navegador se muestra el index.html YA HABIENDO
+EJECUTADO el script del body. Entonces este script solo es el codigo a que se va a
+ejecutar al abroir el index.html en el navegador.
+
+Responde en el archivo entregable.txt createCard ¿es una función recursiva?
+
+    Sí lo es, porque dentro de createCard se manda a llamar a si misma en el botón del final.
+    Precisamente para crear una nueva card en el html.
+
+Analiza el código y si hace falta investiga para responder en entregable.txt ¿qué es el valor document?
+
+    document es un objeto global que nos da el navegador y representa TODO EL CONTENIDO HTML.
+    Es parte del modelo de objetos del navegador BOM.
+
+Responde en entregable.txt ¿qué hace la función createElement?
+
+    Crea un nuevo elemento del tipo que se especifica.
+    Y devuelve un nodo HTML vacío que puede modificarse antes de insertarse al DOM.
+
+Responde en entregable.txt ¿qué hace la función appendChild?
+    Inserta un nodo hijo dentro de un nodo padre.
+
+
+
+Lo que hace "e" es el OBJETO DEL DOCUMENTO AL QUE LE HICE CLICK.
+La acción de haber dado click.
+La forma en la que cambia de color y como se deshabilita es porque con el elemento e, 
+sabemos a que elemto se le da click. Con el e.target.disabled=true; lo deshabilitamos
+
+
+Agrega las siguientes líneas de código antes del comentario de poner etiquetas dentro de etiquetas
+// <label class="form-label">
+labelFormLabel= document.createElement("label");
+labelFormLabel.classList.add("form-label")
+labelFormLabel.innerText="new item title" ;
+
+//<input type="text" class="form-control mb-4">
+inputFormControl=document.createElement("input");
+inputFormControl.classList.add("form-control","mb-4")
+inputFormControl.type="text";
+Carga nuevamente el navegador web y responde en entregable.txt ¿por qué no hay cambios?
+    No hay cambios porque no se ha agregado al document, de la misma forma como lo hicimos con los demas elementos
+    con el appendChild.
